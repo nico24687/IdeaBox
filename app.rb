@@ -14,16 +14,17 @@ Bundler.require
   end
   
   get '/' do
-    erb :index
+    erb :index, locals: {ideas: Idea.all}
   end
   
   post '/' do
+    params.inspect
     #1. Create an idea based on the form parameter 
-    idea = Idea.new
-    #2. Store it 
+    idea = Idea.new(params['idea_title'],params['idea_description'])
+    # #2. Store it 
     idea.save 
-    #3. send us back to the index page to see all ideas 
-    "Creating an Idea"
+    # #3. send us back to the index page to see all ideas 
+    redirect '/'
   end
   
 # end
