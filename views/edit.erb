@@ -11,8 +11,8 @@
                 Edit your idea:
             </p>
             <input type = "hidden" name = "_method" value = "PUT">
-            <input class = "form-control" type = "text" name = "idea_title" value = "<%= idea.title%>" /> <br/>
-            <textarea class = "form-control" name = "idea_description"> <%= idea.description %> </textarea> <br/>
+            <input class = "form-control" type = "text" name = "idea[title]" value = "<%= idea.title%>" /> <br/>
+            <textarea class = "form-control" name = "idea[description]"> <%= idea.description %> </textarea> <br/>
             <div align = "center">
                 <input class = "btn btn-info" type ="submit">    
             </div>

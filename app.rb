@@ -22,7 +22,7 @@ Bundler.require
   post '/' do
     params.inspect
     #1. Create an idea based on the form parameter 
-    idea = Idea.new(params['idea_title'],params['idea_description'])
+    idea = Idea.new(params[:idea])
     # #2. Store it 
     idea.save 
     # #3. send us back to the index page to see all ideas 
@@ -40,11 +40,7 @@ Bundler.require
   end 
   
   put '/:id' do |id|
-    data = {
-      :title => params['idea_title'],
-      :description => params['idea_description']
-    }
-    Idea.update(id.to_i,data)
+    Idea.update(id.to_i, params[:idea])
     redirect '/'
   end
   

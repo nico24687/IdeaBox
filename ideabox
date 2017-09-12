@@ -1,4 +1,8 @@
 ---
 ideas:
-- :title: Tennis!!
-  :description: " Build a tennis court!!!  "
+- !ruby/hash:Sinatra::IndifferentHash
+  title: Tennis
+  description: 'Go and build a tennis court   '
+- !ruby/hash:Sinatra::IndifferentHash
+  title: Roar
+  description: 'Go and get your shoes  '
